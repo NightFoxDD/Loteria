@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Loteria.Pages.ResultPage"
+             Title="Wynik"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="SB_SearchLossNumber"  Placeholder="Wyszukaj numer losowania"/>
+            <ListView x:Name="LV_Winners" Margin="10" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label FontSize="12" Text="{Binding Id, StringFormat='Numer losowania: {0}'}"/>
+                                <Label FontSize="12" Text="{Binding LotteryDay, StringFormat='Data i godzina losowania: {0}'}"/>
+                                <Label FontSize="12" Text="{Binding Numbers, StringFormat='Ilosc wygranych: {0}'}"/>
+                                <Label FontSize="12" Text="{Binding NumberOfWinners, StringFormat='Wygrany kod: {0}'}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

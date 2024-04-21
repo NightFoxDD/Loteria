@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Loteria.Pages.UserPage"
+             Title="Gracz"
+             >
+    <ContentPage.Resources>
+        <Style TargetType="Button" x:Key="Btn_User">
+            <Setter Property="BackgroundColor" Value="Gray"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="WidthRequest" Value="250"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+            <Entry x:Name="E_Name" Keyboard="Default" Placeholder="Imie"/>
+            <Entry x:Name="E_Surname" Keyboard="Default" Placeholder="Nazwisko"/>
+            <Entry x:Name="E_Email" Keyboard="Email" Placeholder="Email"/>
+            <Entry x:Name="E_Code" Keyboard="Default" Placeholder="Kod"/>
+            <Button Text="Aplikuj" Style="{DynamicResource Btn_User}" Clicked="Btn_Apply_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

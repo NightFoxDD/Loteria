@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Loteria.Pages.AdminPage"
+             Title="Admin"
+             >
+    <ContentPage.Resources>
+        <Style TargetType="Button" x:Key="Btn_Admin">
+            <Setter Property="BackgroundColor" Value="Gray"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="WYLOSUJ WYGRANEGO" Style="{DynamicResource Btn_Admin}" Clicked="Btn_LossWinner_Clicked"/>
+            <Button Text="KAŻDY WYGRYWA" Style="{DynamicResource Btn_Admin}" Clicked="Btn_EveryUserWinning_Clicked"/>
+            <Label x:Name="Lbl_Date"/>
+            <Label x:Name="Lbl_NumberOfWinners"/>
+            <Label x:Name="Lbl_WinnerCode"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
